@@ -1364,6 +1364,7 @@ class StatementHandler(lang: LLVMIRLanguageFrontend) :
             i++
             if (labelI == null) {
                 log.error("Expecting to find a label with name $labelName for Phi statement.")
+                continue
             }
             labelMap[labelI as LabelStatement] = valI
         }
